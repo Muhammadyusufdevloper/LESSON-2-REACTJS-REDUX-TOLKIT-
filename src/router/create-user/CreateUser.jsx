@@ -41,11 +41,11 @@ function CreateUser() {
     <div className='create__user'>
       <h2>Create User</h2>
       <form onSubmit={handleSubmit} className='create__user-form' action="">
-        <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='name' />
-        <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='username' />
-        <input value={profession} onChange={(e) => setProfession(e.target.value)} type="text" placeholder='profession' />
-        <input maxLength={3} value={age} onChange={handleAgeChange} type="number" placeholder='age' />
-        <select value={gender} onChange={(e) => setGender(e.target.value)} name="" id="">
+        <input required value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='name' />
+        <input required value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='username' />
+        <input required value={profession} onChange={(e) => setProfession(e.target.value)} type="text" placeholder='profession' />
+        <input required maxLength={3} value={age} onChange={handleAgeChange} type="number" placeholder='age' />
+        <select required value={gender} onChange={(e) => setGender(e.target.value)} name="" id="">
           <option value="" hidden disabled>gender</option>
           <option value="male">male</option>
           <option value="female">female</option>
